@@ -1,0 +1,377 @@
+.explore__items {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 90px 10px 81px 10px;
+}
+
+.explore__items-container {
+    width: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .explore__items-titleBlock p {
+        color: #1A1A1A;
+        font-family: TharLon;
+        font-size: 20px;
+        line-height: 160%;
+        /* 32px */
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .explore__items-titleBlock h2 {
+        color: var(--grey-900, #1A1A1A);
+        font-family: TharLon;
+        font-size: 48px;
+        line-height: 125%;
+        /* 60px */
+        letter-spacing: 4.8px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .explore__items-buttonsWrapper {
+        display: flex;
+        justify-content: center;
+        margin: 48px 0 24px 0;
+
+        & button {
+            border: 1px solid var(--grey-900, #1A1A1A);
+            color: var(--grey-900, #1A1A1A);
+            font-family: TharLon;
+            font-size: 12px;
+            line-height: 16px;
+            /* 133.333% */
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            padding: 12px 50px 12px 23px;
+            outline: none;
+
+            &:hover {
+                background-color: #b3b1b1;
+                transition: 0.3s ease-in;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 19px;
+                right: 25px;
+                width: 20px;
+                height: 1px;
+                background: #1A1A1A;
+            }
+        }
+
+        & button:first-child {
+            margin-right: 32px;
+        }
+    }
+
+    .explore__items-products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* column-gap: 32px; */
+    }
+
+    .explore__items-link {
+        position: relative;
+    }
+
+    .explore__items-imgWrap {
+        max-width: 376px;
+        height: 472px;
+
+        &:hover {
+            filter: drop-shadow(0px -4px 10px rgb(0, 0, 0));
+            transition: 0.2s ease-in;
+        }
+    }
+
+    .explore__items-img {
+        width: 100%;
+        height: 472px;
+    }
+
+    .explore__items-category {
+        position: absolute;
+        bottom: 16px;
+        left: 0;
+        background: #435476;
+
+        & p {
+            color: var(--grey-white, #FFF);
+            font-family: TharLon;
+            font-size: 12px;
+            line-height: 100%;
+            /* 12px */
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 4px 8px 4px 39px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 23px;
+                height: 1px;
+                background: #FFF;
+                bottom: 50%;
+                left: 8px;
+            }
+        }
+    }
+
+    .explore__items-brandName {
+        color: var(--grey-400, #999);
+        font-family: TharLon;
+        font-size: 16px;
+        line-height: 175%;
+        /* 28px */
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+    }
+
+    .explore__items-productName {
+        color: #1A1A1A;
+        font-family: TharLon;
+        font-size: 24px;
+        line-height: 150%;
+        /* 36px */
+        letter-spacing: 3.84px;
+        text-transform: uppercase;
+    }
+
+    .explore__items-priceBlock {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .explore__items-discountPrice {
+            color: #E20000;
+            font-family: TharLon;
+            font-size: 18px;
+            line-height: 28px;
+            /* 155.556% */
+            margin-right: 8px;
+        }
+
+        .explore__items-fullPrice {
+            color: var(--grey-400, #999);
+            font-family: TharLon;
+            font-size: 16px;
+            line-height: 175%;
+            /* 28px */
+            text-decoration: line-through;
+        }
+
+        .explore__items-opportunities {
+            display: flex;
+            align-items: center;
+        }
+
+        .explore__items-addToCart {
+            color: var(--grey-800, #333);
+            font-family: TharLon;
+            font-size: 12px;
+            line-height: 16px;
+            /* 133.333% */
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--grey-800, #333);
+            margin: 0 13px 0 20px;
+        }
+
+        .explore__items-quickview {
+            color: var(--grey-800, #333);
+            font-family: TharLon;
+            font-size: 12px;
+            line-height: 16px;
+            /* 133.333% */
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--grey-800, #333);
+            margin-right: 16px;
+        }
+
+        .explore__items-svgExplore {
+            margin-right: 16px;
+        }
+
+        .withoutDisc {
+            text-decoration: none;
+        }
+    }
+}
+
+.hidden-block {
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+
+.visible-block {
+    opacity: 1;
+    transition: 0.3s ease-in;
+}
+
+.hide-product {
+    display: none;
+}
+
+// Адаптив 
+
+@media (min-width: 320px) and (max-width:480px) {
+    .explore__items {
+        padding: 50px 10px 0 10px;
+
+        .explore__items-titleBlock h2 {
+            font-size: 25px;
+        }
+
+        .explore__items-buttonsWrapper {
+            display: flex;
+            justify-content: center;
+            margin: 48px 0 24px 0;
+
+            & button {
+                padding: 12px 25px 12px 25px;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            & button:first-child {
+                margin-right: 20px;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .explore__items-element {
+            margin: 0 auto;
+        }
+
+        .explore__items-productName {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .explore__items-brandName {
+            text-align: center;
+        }
+
+        .explore__items-priceBlock {
+            display: block;
+            margin-bottom: 20px;
+
+            .explore__items-discountPrice {
+                text-align: center;
+            }
+
+            .explore__items-fullPrice {
+                text-align: center;
+            }
+
+            .explore__items-opportunities {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 481px) and (max-width:800px) {
+    .explore__items {
+        padding: 50px 10px 0 10px;
+
+        .explore__items-titleBlock h2 {
+            font-size: 25px;
+        }
+
+        .explore__items-buttonsWrapper {
+            display: flex;
+            justify-content: center;
+            margin: 48px 0 24px 0;
+
+            & button {
+                padding: 12px 25px 12px 25px;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            & button:first-child {
+                margin-right: 20px;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .explore__items-products {
+            column-gap: 32px;
+        }
+
+        .explore__items-element {
+            margin: 0 auto;
+
+        }
+
+        .explore__items-productName {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .explore__items-brandName {
+            text-align: center;
+        }
+
+        .explore__items-priceBlock {
+            display: block;
+            margin-bottom: 20px;
+
+            .explore__items-discountPrice {
+                text-align: center;
+            }
+
+            .explore__items-fullPrice {
+                text-align: center;
+            }
+
+            .explore__items-opportunities {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 801px) and (max-width:1220px) {
+    .explore__items-container {
+
+        .explore__items-products {
+            justify-content: center;
+            column-gap: 32px;
+        }
+    }
+}
+
+@media (min-width: 1221px) and (max-width:1599px) {
+    .explore__items-container {
+
+        .explore__items-products {
+            justify-content: center;
+            column-gap: 32px;
+        }
+    }
+}

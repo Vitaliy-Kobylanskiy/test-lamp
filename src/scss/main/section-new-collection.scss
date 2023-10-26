@@ -1,0 +1,234 @@
+.new__collection {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0 10px;
+
+    .new__collection-blockTitle {
+        margin: 0 auto;
+        padding: 44px 0 48px 0;
+        text-align: center;
+    }
+
+    & p {
+        color: #1A1A1A;
+        font-family: TharLon;
+        font-size: 20px;
+        line-height: 160%;
+        /* 32px */
+    }
+
+    & h2 {
+        color: var(--grey-900, #1A1A1A);
+        font-family: TharLon;
+        font-size: 48px;
+        line-height: 125%;
+        /* 60px */
+    }
+
+    .new__collection-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .new__collection-block {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 0 10px 0;
+    }
+
+    .new__collection-img {
+        width: 376px;
+        height: 524px;
+    }
+
+    .new__collection-imgWrapper {
+        margin-bottom: 20px;
+    }
+
+    .new__collection-text {
+        color: #1A1A1A;
+        font-family: TharLon;
+        font-size: 24px;
+        line-height: 150%;
+        /* 36px */
+        letter-spacing: 3.84px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .new__collection-description {
+        color: #1A1A1A;
+        font-family: TharLon;
+        font-size: 12px;
+        line-height: 16px;
+        /* 133.333% */
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        margin-top: 8px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 81px;
+            height: 1px;
+            background-color: #1A1A1A;
+            bottom: -2px;
+            left: 39%;
+        }
+    }
+}
+
+.slider {
+    position: relative;
+    padding: 0 120px;
+}
+
+.slider-item:hover {
+    filter: drop-shadow(3px 3px 10px rgb(0, 0, 0));
+    transition: 0.2s ease-in;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 70px;
+    height: 90px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: -45px 0 0 0;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url('../img/left-slider.svg') 0 0 / 100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url('../img/right-slider.svg') 0 0 / 100% no-repeat;
+}
+
+.slider .slick-slide {
+    margin: 0 16px;
+}
+
+.slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .slick-dots li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.slider .slick-dots li.slick-active button {
+    background-color: rgb(9, 9, 9);
+}
+
+.slider .slick-dots button {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(64, 64, 64);
+    border: none;
+    cursor: pointer;
+}
+
+// Адаптив 
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .new__collection {
+
+        .new__collection-blockTitle {
+            margin: 0 auto;
+            padding: 44px 0 48px 0;
+            text-align: center;
+        }
+
+        & p {
+            font-size: 15px;
+        }
+
+        & h2 {
+            margin-top: 10px;
+            font-size: 25px;
+        }
+
+        .new__collection-text {
+            font-size: 15px;
+        }
+    }
+
+    .slider {
+        padding: 0;
+    }
+
+    .slider .slick-arrow {
+        width: 0;
+        height: 0;
+    }
+
+    .slider .slick-dots button {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .new__collection {
+
+        .new__collection-blockTitle {
+            margin: 0 auto;
+            padding: 44px 0 48px 0;
+            text-align: center;
+        }
+
+        & p {
+            font-size: 15px;
+        }
+
+        & h2 {
+            margin-top: 10px;
+            font-size: 25px;
+        }
+
+        .new__collection-text {
+            font-size: 15px;
+        }
+    }
+
+    .slider {
+        padding: 0 50px;
+    }
+
+    .slider .slick-arrow {
+        width: 40px;
+        height: 70px;
+        margin: -35px 0 0 0;
+    }
+
+    .slider .slick-dots button {
+        width: 15px;
+        height: 15px;
+    }
+}
